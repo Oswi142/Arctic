@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCTIC MONKEYS</title>
+    <!-- Agrega los enlaces a los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="https://arcticmonkeys.com/wp-content/themes/arctic-monkeys/public/favicon.ico" type="image/x-icon">
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #f7f7f7;
+        }
+        /* Estilo para el pie de página */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* Estilo para el contenido principal */
+        main {
+            margin-bottom: 60px; /* Ajusta este valor según la altura de tu pie de página */
+        }    
+        .bg-beigeclaro{
+            background-color: rgb(209, 209, 183);
+        }
+        /* Estilo para el fondo beige del header */
+        .bg-beige {
+            background-color: rgb(183, 183, 146);
+        }
+        .btn-beige {
+            background-color: rgb(209, 209, 183);
+            color: #000; /* Cambia el color del texto si es necesario */
+            /* Agrega más estilos según tus preferencias */
+        }
+
+        /* Estilo personalizado para botones beige cuando están activos (presionados) */
+        .btn-beige:active,
+        .btn-beige:focus {
+            background-color: #f5deb3; /* Cambia el color cuando el botón se presiona o se enfoca */
+            color: #000; /* Cambia el color del texto si es necesario */
+            /* Agrega más estilos según tus preferencias */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-beige">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">ARCTIC MONKEYS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="biografia.html">Biografía</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="discografia.html">Discografía</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="store.html">Store</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="display-4 text-center my-5">Tour Arctic Monkeys</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="mb-4">Fechas</h2>
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th class="bg-beigeclaro">Fecha</th>
+                                <th class="bg-beigeclaro">Lugar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20 de agosto de 2023</td>
+                                <td>Estadio Azteca, Ciudad de México</td>
+                            </tr>
+                            <tr>
+                                <td>22 de agosto de 2023</td>
+                                <td>Estadio Monumental, Lima, Perú</td>
+                            </tr>
+                            <tr>
+                                <td>24 de agosto de 2023</td>
+                                <td>Estadio Nacional, Santiago, Chile</td>
+                            </tr>
+                            <tr>
+                                <td>26 de agosto de 2023</td>
+                                <td>Estadio Único de La Plata, La Plata, Argentina</td>
+                            </tr>
+                            <tr>
+                                <td>28 de agosto de 2023</td>
+                                <td>Estadio Único de Montevideo, Montevideo, Uruguay</td>
+                            </tr>
+                            <tr>
+                                <td>30 de agosto de 2023</td>
+                                <td>Estadio de los Juegos Mediterráneos, Almería, España</td>
+                            </tr>
+                            <tr>
+                                <td>1 de septiembre de 2023</td>
+                                <td>Estadio de La Romareda, Zaragoza, España</td>
+                            </tr>
+                            <tr>
+                                <td>3 de septiembre de 2023</td>
+                                <td>Estadio José Zorrilla, Valladolid, España</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-4">Precios</h2>
+                    <p>
+                        Los precios de las entradas para el tour de Arctic Monkeys comienzan en $50 USD.
+                    </p>
+                    <a href="https://www.arcticmonkeys.com/tour/" class="btn btn-beige btn-lg">Comprar entradas</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3 ">
+        <div class="container">
+            © 2023 Arctic Monkeys
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

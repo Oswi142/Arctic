@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCTIC MONKEYS</title>
+    <!-- Agrega los enlaces a los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="https://arcticmonkeys.com/wp-content/themes/arctic-monkeys/public/favicon.ico" type="image/x-icon">
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #cecec7;
+        }
+        /* Estilo para el pie de página */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* Estilo para el contenido principal */
+        main {
+        margin-bottom: 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+        .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        }
+
+        .row {
+        margin-bottom: 20px;
+        }
+
+        .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        }
+
+        h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        }
+
+        p {
+        font-size: 18px;
+        line-height: 1.5;
+        }
+
+        img {
+        max-width: 100%;
+        }
+
+        ul {
+        list-style-type: none;
+        padding-left: 0;
+        }
+
+        li {
+        margin-bottom: 10px;
+        }
+
+        a {
+        color: #343a40;
+        text-decoration: none;
+        }
+
+        a:hover {
+        color: #000;
+        text-decoration: underline;
+        }
+
+        .bg-beige {
+        background-color: rgb(183, 183, 146);
+        }
+
+        .img-fluid {
+        max-width: 100%;
+        height: auto;
+        }
+        /* Estilo para el fondo beige del header */
+        .bg-beige {
+            background-color: rgb(183, 183, 146);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-beige">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">ARCTIC MONKEYS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="discografia.html">Discografía</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="store.html">Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tour.html">Tour</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p>
+                Arctic Monkeys es una banda de indie rock inglesa formada en Sheffield en 2002. El grupo está integrado por Alex Turner (voz, guitarra), Jamie Cook (guitarra), Matt Helders (batería) y Nick O'Malley (bajo).
+              </p>
+              <p>
+                Arctic Monkeys se hicieron conocidos a nivel mundial con su álbum debut, Whatever People Say I Am, That's What I'm Not (2006), que se convirtió en el álbum debut más vendido en la historia del Reino Unido. La banda ha seguido cosechando éxitos con sus siguientes álbumes, Favourite Worst Nightmare (2007), Humbug (2009), Suck It and See (2011), AM (2013) y Tranquility Base Hotel & Casino (2018).
+              </p>
+              <p>
+                Arctic Monkeys son considerados una de las bandas más importantes de la música indie rock de la última década. Su sonido ha evolucionado a lo largo de los años, pero siempre han mantenido su calidad y su capacidad de crear canciones memorables.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img src="monos.webp" alt="Arctic Monkeys" class="img-fluid">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h2>Discografía</h2>
+              <ul>
+                <li>Whatever People Say I Am, That's What I'm Not (2006)</li>
+                <li>Favourite Worst Nightmare (2007)</li>
+                <li>Humbug (2009)</li>
+                <li>Suck It and See (2011)</li>
+                <li>AM (2013)</li>
+                <li>Tranquility Base Hotel & Casino (2018)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </main>   
+
+    <footer class="bg-dark text-light text-center py-3 ">
+        <div class="container">
+            © 2023 Arctic Monkeys
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arctic Monkeys</title>
+    <!-- Agrega los enlaces a los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="https://arcticmonkeys.com/wp-content/themes/arctic-monkeys/public/favicon.ico" type="image/x-icon">
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f7f7f7;
+        }
+        /* Estilo para el contenido principal */
+        main {
+            margin-bottom: 40px; /* Ajusta este valor según la altura de tu pie de página */
+        }    
+        /* Estilo para el fondo beige del header */
+        .bg-beige {
+            background-color: rgb(183, 183, 146);
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .product-img {
+            max-width: 100%; /* La imagen no será más ancha que su contenedor */
+            max-height:max-content; /* Establece la altura máxima deseada */
+            height: auto; /* Permite que la altura se ajuste automáticamente */
+            margin-bottom: 10px;
+        }
+        /* Estilo personalizado para botones beige */
+        /* Estilo personalizado para botones beige */
+        .btn-beige {
+            background-color: rgb(209, 209, 183);
+            color: #000; /* Cambia el color del texto si es necesario */
+            /* Agrega más estilos según tus preferencias */
+        }
+
+        /* Estilo personalizado para botones beige cuando están activos (presionados) */
+        .btn-beige:active,
+        .btn-beige:focus {
+            background-color: #f5deb3; /* Cambia el color cuando el botón se presiona o se enfoca */
+            color: #000; /* Cambia el color del texto si es necesario */
+            /* Agrega más estilos según tus preferencias */
+        }
+
+        /* Estilo personalizado para botones beige cuando el cursor está sobre ellos (hover) */
+        .btn-beige:hover {
+            background-color: #d2b48c; /* Cambia el color cuando el cursor está sobre el botón */
+            color: #000; /* Cambia el color del texto si es necesario */
+            /* Agrega más estilos según tus preferencias */
+        }
+
+        /* Estilo personalizado para botones beige */
+        .btn-filter {
+            background-color: rgb(209, 209, 183);
+            color: #000; /* Cambia el color del texto si es necesario */
+            /* Agrega más estilos según tus preferencias */
+        }
+
+        /* Estilo personalizado para botones beige cuando están activos (presionados) */
+        .btn-filter:active,
+        .btn-filter:focus {
+            background-color: #f5deb3; /* Cambia el color cuando el botón se presiona o se enfoca */
+            color: #000; /* Cambia el color del texto si es necesario */
+            /* Agrega más estilos según tus preferencias */
+        }
+
+        /* Estilo personalizado para botones beige cuando el cursor está sobre ellos (hover) */
+        .btn-filter:hover {
+            background-color: #d2b48c; /* Cambia el color cuando el cursor está sobre el botón */
+            color: #000; /* Cambia el color del texto si es necesario */
+            /* Agrega más estilos según tus preferencias */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-beige">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">ARCTIC MONKEYS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="biografia.html">Biografía</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="discografia.html">Discografía</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tour.html">Tour</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+    
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <!-- Panel de filtrado -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Filtrar Productos</h5>
+                        <form id="filter-form">
+                            <div class="form-group">
+                                <label for="categoria">Categoría:</label>
+                                <select class="form-control" id="categoria">
+                                    <option value="">Todas</option>
+                                    <option value="Frutas">Discos</option>
+                                    <option value="Verduras">Camisetas</option>
+                                    <option value="Lácteos">Hoodies</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="precio">Precio:</label>
+                                <input type="range" class="form-control-range" id="precio" min="0" max="100" value="50">
+                                <span id="precio-value">$50</span>
+                            </div>
+                            <button type="submit" class="btn btn-filter">Filtrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row" id="product-list">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const productos = [
+                { nombre: "AM", categoria: "Discos", precio: 2.99, imagen: "am.jpg" },
+                { nombre: "Tranquility Base Hotel and Casino", categoria: "Discos", precio: 1.49, imagen: "tbhc.png" },
+                { nombre: "Favourite Worst Nightmare", categoria: "Discos", precio: 3.99, imagen: "fav.jpg" },
+                { nombre: "Humbug", categoria: "Discos", precio: 1.99, imagen: "hum.jpg" },
+                { nombre: "The Car", categoria: "Discos", precio: 1.29, imagen: "car.jpg" },
+                { nombre: "Camiseta Arctic Monkeys 8/23", categoria: "Camiseta", precio: 2.49, imagen: "cami.webp" },
+                { nombre: "Camiseta Arctic Monkeys 7/23", categoria: "Camiseta", precio: 3.49, imagen: "cami2.webp" },
+                { nombre: "Poster Arctic", categoria: "Poster", precio: 1.99, imagen: "poster1.jpg" },
+                { nombre: "Poster Monkeys", categoria: "Poster", precio: 4.99, imagen: "poster2.jpg" }
+                // Agregar más productos aquí
+            ];
+
+            function mostrarProductos(filtroCategoria, filtroPrecio) {
+            const productList = document.getElementById("product-list");
+            productList.innerHTML = "";
+
+            productos.forEach((producto) => {
+                if (
+                (filtroCategoria === "" || producto.categoria === filtroCategoria) &&
+                producto.precio <= filtroPrecio
+                ) {
+                const productCard = document.createElement("div");
+                productCard.classList.add("col-md-4", "product-card");
+                productCard.innerHTML = `
+                    <img src="${producto.imagen}" alt="${producto.nombre}" class="product-img">
+                    <h4>${producto.nombre}</h4>
+                    <p>Categoría: ${producto.categoria}</p>
+                    <p>Precio: $${producto.precio.toFixed(2)}</p>
+                    <button class="btn btn-beige btn-add-to-cart">Agregar al carrito</button>
+                `;
+                productList.appendChild(productCard);
+                }
+            });
+            }
+
+            // Manejar el envío del formulario de filtrado
+            const filterForm = document.getElementById("filter-form");
+            filterForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const categoria = document.getElementById("categoria").value;
+            const precio = document.getElementById("precio").value;
+            document.getElementById("precio-value").textContent = `$${precio}`;
+            mostrarProductos(categoria, precio);
+            });
+
+            // Mostrar todos los productos al cargar la página
+            mostrarProductos("", 50);
+    </script>
+</body>
+</html>
