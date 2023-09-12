@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="shortcut icon" href="https://arcticmonkeys.com/wp-content/themes/arctic-monkeys/public/favicon.ico" type="image/x-icon">
     <style>
-        body{
+        body {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             background-image: url(packshot.jpeg);
         }
@@ -30,12 +30,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            height: calc(100vh - 56px); /* Resta la altura del encabezado */
         }
         img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -71,7 +70,7 @@
         <img src="tekirisi.png" alt="Imagen de Arctic Monkeys">
     </main>
 
-    <footer class="bg-dark text-light text-center py-3 ">
+    <footer class="bg-dark text-light text-center py-3">
         <div class="container">
             © 2023 Arctic Monkeys
         </div>
