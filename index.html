@@ -67,7 +67,14 @@
     </header>
 
     <main>
-        <img src="tekirisi.png" alt="Imagen de Arctic Monkeys">
+        <picture>
+            <!-- Imagen predeterminada para pantallas grandes -->
+            <source media="(min-width: 768px)" srcset="tekirisi.png">
+            <!-- Imagen para pantallas pequeñas -->
+            <source media="(max-width: 767px)" srcset="tekirisi2.png">
+            <!-- Fallback para navegadores que no admiten la etiqueta 'picture' -->
+            <img src="tekirisi2.png" alt="Imagen de Arctic Monkeys">
+        </picture>
     </main>
 
     <footer class="bg-dark text-light text-center py-3">
